@@ -4,20 +4,12 @@
 #include<conio.h>
 #include"Generator.h"
 #include"FileInitialization.h"
-#include"constants.h"
+#include"Constants.h"
 #pragma warning(disable : 4996)
 
 using namespace std;
 
 Student student[114514];
-
-class Constants {
-public:
-	string MainMenu = "Main Menu:\n1.根据已经按排序的列表生成\n2.关于\n3.退出\n";
-	string About = "About:\n由stardustQHW开发\n版本:v1.1\nGithub:https://github.com/stardustQHW/Team-Dev\n";
-private:
-	string version = "v1.1";
-};
 
 class Worker {
 public:
@@ -26,8 +18,8 @@ public:
 
 
 int main() {
-
 	while (true) {
+		system("cls");
 		cerr << Constants().MainMenu << endl;
 		char handle;
 		handle = getch();
@@ -44,7 +36,7 @@ void Worker::carryOut(int operation)
 		system("cls");
 		freopen("result.txt", "w", stdout);
 		FileInitialization().createFiles();
-		cerr << "请依次输入总人数与分成小组数量:" << endl;
+		cerr << "������������������ֳ�С������:" << endl;
 		int totalStudentNumber;
 		cin >> totalStudentNumber;
 		int totalTeamNumber;
@@ -59,6 +51,7 @@ void Worker::carryOut(int operation)
 		}
 		Generator(totalStudentNumber).generateWithSortedList_Captained(student, totalTeamNumber);
 		fclose(stdout);
+		fclose(stdin);
 		system("result.txt");
 		system("pause");
 		exit(0);
@@ -80,4 +73,5 @@ void Worker::carryOut(int operation)
 		system("cls");
 		break;
 	}
+	system("cls");
 }

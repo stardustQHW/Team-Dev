@@ -4,6 +4,10 @@
 
 void Generator::generateWithSortedList_Captained(Student student[], int teamNumber)
 {
+	if (teamNumber > totalStudentNumber) {
+		throw InvalidInputException(totalStudentNumber, teamNumber);
+		return;
+	}
 	srand(time(NULL));
 	int teamLength = totalStudentNumber / teamNumber;
 	int remainLength = totalStudentNumber % teamNumber;

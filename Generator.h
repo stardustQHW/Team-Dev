@@ -1,5 +1,6 @@
 #pragma once
 #include"Student.h"
+#include"Exceptions.h"
 
 class Generator
 {

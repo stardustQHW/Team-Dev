@@ -127,13 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Exceptions.cpp" />
     <ClCompile Include="FileInitialization.cpp" />
     <ClCompile Include="Generator.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Student.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="constants.h" />
+    <ClInclude Include="Constants.h" />
+    <ClInclude Include="Exceptions.h" />
     <ClInclude Include="FileInitialization.h" />
     <ClInclude Include="Generator.h" />
     <ClInclude Include="Student.h" />
